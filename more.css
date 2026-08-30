@@ -1,0 +1,113 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background-image: url('image/bg\ back.jpg');
+    background-size: cover;   /* makes it responsive */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 110vh;
+}
+button{
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 900;
+    background-image: url('image/bg\ back.jpg');
+    background-size: cover;   /* makes it responsive */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgba(2, 155, 200);
+    position:fixed;
+    top:70%;
+    right:10%;
+    font-size:50px;
+    padding:2px 35px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00BFFF; /* starting glow */
+  }
+  to {
+    box-shadow: 0 0 25px #00BFFF, 0 0 50px #00BFFF; /* stronger glow */
+  }
+}
+button:hover{
+    transform:scale(1.5);
+    transition-duration: 1s;
+    box-shadow: inset 0 0 10px rgba(2, 155, 200), 0 0 20px rgba(2, 155, 200), 0 0 30px rgba(2, 155, 200);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;   /* centers cards horizontally */
+  align-items: center;       /* centers cards vertically if container has height */
+  min-height: 100vh;         /* optional: makes container full screen height */
+}
+.card {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 0 15px #00BFFF; /* glowing blue */
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00BFFF;
+  text-decoration: none;
+  font-weight: bold;
+}
+.header{
+    background-color: #00BFFF;
+}
+h1{
+    color:#FFFFFF;
+}
+.roller {
+  overflow: hidden;
+  height: 100vh; /* adjust to show a few cards at once */
+  width: auto;
+  margin:0px;
+  background: transparent;
+}
+
+.roller-track {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-vertical 90s linear infinite;
+}
+
+.card {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #00BFFF;
+}
+
+/* Animation for vertical scrolling */
+@keyframes scroll-vertical {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%); /* moves cards upward */
+  }
+}
+h1{
+    padding:10px;
+}

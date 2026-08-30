@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DK XOX game</title>
+    <link  rel="icon" type="image/png" href="image/dklogo.png">
+    <link  rel="stylesheet" type="text/css" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <div id="popup-get-information">
+        <button id="exit" onclick="window.location.href='home.html'">X</button>
+        <div id="popup-content">
+            <h1>Enter your name</h1>
+            <div id="input-container">
+            <label id="name-label" for="name-input">Name:</label>
+            <input type="text" id="name-input" placeholder="Enter your name">
+            </div>
+            <button id="submit-name" onclick="closePopup()">Submit</button>
+        </div>
+    </div>
+    <div id="heading-border">
+        <h1 id="heading">DK <span id="sp"> X😊X</span></h1>
+    </div>
+    <br>
+   <button id="home" onclick="window.location.href='home.html'"><i class="bi bi-house-door"></i></button>
+   <div id="imgborder">
+   <img id="phota" src="image/unknown passport size image.webp">
+   </div>
+   <div id="playerinfo">
+       <p id="name">Name:</p>
+       <p id="timer-box">Time Left: <span id="time-remaining">30</span>s</p>
+   </div>
+   <center>
+   <div id="time-left-pop"></div>
+   <div class="board" id="board">
+        <ul>
+            <section>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </section>
+            <section>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </section>
+            <section>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+            </section>
+        </ul>
+   </div>
+   <div id="win"></div>
+   <h2 id="turn"></h2>
+   </center>
+   <button id="back" onclick="window.location.href='home.html'"><i class="bi bi-arrow-left"></i></button>
+   <button id="rulse"onclick="window.location.href='rules.html'" ><i class="bi bi-info"></i></button>
+</body>
+<script src="game.js"></script>
+</html>
