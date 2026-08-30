@@ -178,7 +178,7 @@ function win(){
   w.style.fontWeight="900";
   w.style.boxShadow="0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6)";
   w.style.background="linear-gradient(135deg, #ffcc00, #ff9900)";
-  w.textContent="சக்ஸஸ்ஸு! இனிமேல் யாருமே என்னை ஜெயிக்க முடியாது! இதுதான் அந்த டயலாக். இதை உங்க கேம்ல எப்படிப் பயன்படுத்தப் போறீங்க? நீ ஒரு ஆர்ட்டிஸ்ட் டா! 🏆🏆🏆🏆ஏல... யாருலே நீனு?";
+  w.textContent="சக்ஸஸ்ஸு! இனிமேல் யாருமே என்னை ஜெயிக்க முடியாது! 🏆🏆🏆🏆";
 }
 function out(){
   let w=document.getElementById("win");
@@ -194,7 +194,7 @@ function out(){
   w.style.fontWeight="900";
   w.style.boxShadow="0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6)";
   w.style.background="linear-gradient(135deg, #ffcc00, #ff9900)";
-  w.textContent="ஏய், செத்த பையலே, நாரப் பையலே! ஒழுங்கா விளையாடுடா, அசிங்கப்படுத்திட்ட இல்ல! இதோ அந்த டயலாக். வேற ஏதாவது உதவி வேணுமா?";
+  w.textContent="ஏய், செத்த பையலே, நாரப் பையலே! ஒழுங்கா விளையாடுடா, அசிங்கப்படுத்திட்ட இல்ல!";
 }
 
 // Check win
