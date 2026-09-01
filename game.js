@@ -10,7 +10,7 @@ function closePopup() {
     console.log(n);
   }
 
-  if (n === "carmal" || n === "Carmal vibirsha" || n === "Carmal" ||n === "GARMAL" || n === "Aroan" || n === "aroan") {
+  if (n === "carmal" || n === "Carmal vibirsha" || n === "Carmal" ||n === "GARMAL") {
     document.getElementById("name-input").style.color = "green";
     alert("Welcome Carmal. Thank you for using my game my dear friendyyyyy.");
     console.log(n);

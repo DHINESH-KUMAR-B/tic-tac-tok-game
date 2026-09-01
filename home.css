@@ -2,76 +2,106 @@
     padding:"0px";
     margin:"0px";
 }
-#all{
-    background-image: url('image/ChatGPT\ Image\ Aug\ 27\,\ 2026\,\ 04_22_05\ PM.png');
-    background-size: cover;   /* makes it responsive */
+body{
+    background-image: url('image/bgfor\ home.png');
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-}
-img{
-    margin-top: 5%;
-    width: 70%;
-    height: 70%;
 }
 #heading{
     color: rgba(2, 155, 200);
-    padding:20px;
+    padding: 10px;
     text-align: center;
 }
 #start{
-    margin:10%;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: xx-large;
-    font-weight: 900;
+    
     background-image: url('image/bg\ back.jpg');
     background-size: cover;   /* makes it responsive */
     background-position: center;
     background-repeat: no-repeat;
-    color: rgba(2, 155, 200);
+    color: rgba(2, 155, 200); /* Professional green */
+    font-size: 18px;             /* Comfortable text size */
+    font-weight: bold;
+    padding: 14px 32px;          /* Balanced vertical & horizontal padding */
+    border: none;
+    border-radius: 8px;          /* Smooth corners */
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(2, 155, 200); /* Glow effect */
+    transition: all 0.3s ease;
 }
 #start:hover{
-    transform:scale(1.5);
-    transition-duration: 1s;
+    background-color: rgba(2, 155, 200, 0.8);   /* Slightly darker green on hover */
+    box-shadow: 0 0 16px rgba(2, 155, 200, 0.8);
 }
 .btno{
     background-image: url('image/bg\ back.jpg');
     background-size: cover;   /* makes it responsive */
     background-position: center;
     background-repeat: no-repeat;
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: 900;
-    font-size: x-large;
-    margin-bottom: 10%;
-    color: rgba(2, 155, 200);
-}
-.btno:hover{
-    transform:scale(1.1);
-    transition-duration: 1s;
-}
-#mo{
-    padding: 10px 35.15px;
-    margin-left: 10px;
-}
-#ab{
-    margin-right:10px;
+    color: rgba(2, 155, 200); /* Professional green */
+    font-size: 18px;             /* Comfortable text size */
+    font-weight: bold;
+    padding: 14px 32px;          /* Balanced vertical & horizontal padding */
+    border: none;
+    border-radius: 8px;          /* Smooth corners */
+    cursor: pointer;
+    box-shadow: 0 0 12px rgba(2, 155, 200); /* Glow effect */
+    transition: all 0.3s ease;
+    flex: 1 1 40%;                      /* Equal width for all children */
+    margin: 10px;
 }
 
-#wh{
-   margin-right: 35px;
-   font-size: medium;
-   padding-right:10px;
-   padding-left:10px;
-   padding-top: 15px;
-   padding-bottom: 15px;
-   font-weight:900;
-   font-size:large;
+.btno:hover{
+    background-color: rgba(2, 155, 200, 0.8);   /* Slightly darker green on hover */
+    box-shadow: 0 0 16px rgba(2, 155, 200, 0.8);
 }
-#co{
-margin-right: 20px;
-padding:0px 10px;
-padding-right: 10px;
-padding-left:10px;
+@media (max-width: 768px) {
+    .btno {
+        flex: 7 1 100%;   /* Full width per row */
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+}
+/* 💻 Laptop screens */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .btno {
+    flex: 0 0 48%;    /* Always two per row */
+    font-size: 24px;  /* Larger text for laptops */
+    padding: 24px 48px;
+  }
+}
+
+/* 🖥️ Large desktop screens */
+@media (min-width: 1441px) {
+  .btno {
+    flex: 0 0 48%;    /* Still two per row, but bigger */
+    font-size: 26px;
+    padding: 28px 56px;
+  }
+}
+.dialogue-box {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  max-width: 600px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  color: rgba(2, 155, 200); /* Professional green */
+  background: rgba(255,255,255,0.05); /* Transparent overlay */
+  box-shadow: 0 0 20px rgba(2, 155, 200); /* Professional glow */
+  backdrop-filter: blur(6px);
+  width:70%;
+  margin-bottom: 5%; /* Glass effect */
+}
+#box{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px; /* Space between buttons */
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a, #3a3a3a);
+  border: 2px solid rgb(2, 166, 255);       /* Green border for visibility */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(2, 155, 200); 
+  width: 80%;
+  margin:10px;
 }

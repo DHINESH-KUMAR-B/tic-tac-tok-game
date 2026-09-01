@@ -27,7 +27,7 @@
     color: azure;
     font-family: "Permanent Marker", cursive;
     font-style: normal;
-    color:azure;
+    color: azure;
 }
 h1{
     font-size: 90px;
@@ -39,10 +39,16 @@ button{
     border-radius: 20px;
     font-size: xx-large;
     font-weight: 900;
-    background-image: url(image/btn1.avif);   
-    background-position: center;
-    box-shadow: 0 4px 10px rgba(0,0,3,3);
+    border: 2px solid #222222;
+    background-color: #00FF00;
+    color:  #222222;
+    box-shadow: 10px 15px 10px rgba(10,10,10,10);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.bi bi-arrow-right{
+    font-size: 30px;
+    color: #222222;
+    font-weight:bolder;
 }
 @media (max-width: 1024px) {
   .container {

@@ -14,13 +14,29 @@
     <div id="all">
         <h1 id="heading">HOME</h1>
     <center>
-        <img src="image/smil-removebg-preview.png" id="smily"><br>
-        <a href="game.html"><button id="start">START</button></a><br>
+        <div class="dialogue-box" id="dialogue">Loading...</div>
+        <a href="game.html"><button id="start">START</button></a>
+        <div id="box">
         <a href="aboutus.html"><button class="btno" id="ab">About us</button></a>
         <a href="more.html"><button class="btno" id="mo">More</button></a>
         <a href="https://wa.me/919080008298"><button class="btno" id="wh">Whats app</button></a>
         <a href="contact.html"><button class="btno" id="contact">Contact</button></a>
+        </div>
     </center>
     </div>
+  <script>
+    // Example: Fetching dialogues from a local JSON file
+    fetch('dialogues.json')
+      .then(response => response.json())
+      .then(data => {
+        // Pick a random dialogue
+        const randomIndex = Math.floor(Math.random() * data.length);
+        document.getElementById('dialogue').innerText = data[randomIndex];
+      })
+      .catch(error => {
+        document.getElementById('dialogue').innerText = "Error loading dialogue.";
+        console.error(error);
+      });
+  </script>
 </body>
 </html>
