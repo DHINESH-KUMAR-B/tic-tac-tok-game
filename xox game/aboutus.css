@@ -1,0 +1,60 @@
+
+*{
+    padding:0px;
+    margin:0px;
+    color: #CCCCCC;
+}
+body{
+    background-image: url('image/bg\ back.jpg');
+    background-size: cover;   /* makes it responsive */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 115vh;
+}
+button{
+    margin-left: 10px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: 900;
+    background-image: url('image/bg\ back.jpg');
+    background-size: cover;   /* makes it responsive */
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgba(2, 155, 200);
+    position:fixed;
+    top:80%;
+    right:10%;
+    font-size:50px;
+    padding:2px 35px;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00BFFF; /* starting glow */
+  }
+  to {
+    box-shadow: 0 0 25px #00BFFF, 0 0 50px #00BFFF; /* stronger glow */
+  }
+}
+
+button:hover{
+    transform:scale(1.5);
+    transition-duration: 1s;
+    box-shadow: inset 0 0 10px rgba(2, 155, 200), 0 0 20px rgba(2, 155, 200), 0 0 30px rgba(2, 155, 200);
+    animation: glow 1s ease-in-out infinite alternate;
+}
+span{
+    font-weight: 900;
+}
+li,h1,h2,p,hr{
+    padding: 10px;
+}
+li h2,p{
+    padding-left: 20px;
+}
+.header{
+    background-color: #00BFFF;
+}
+h1{
+    color:#FFFFFF;
+}

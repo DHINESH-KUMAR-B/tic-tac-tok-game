@@ -1,0 +1,64 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#rulse{
+    width: 100%;
+    background-color: blue;
+    height: 40%;
+    color: white;
+}
+#script{
+    background: linear-gradient(135deg, #ff009d, #0d0d0d);
+    margin: 5%;
+    border: solid ;
+    border-radius: 10px;
+}
+h1{
+    padding-left: 5%;
+    font-family: "Caacupe One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:50px;
+}
+body{
+    background: linear-gradient(135deg, #4facfe, #7366ff);
+    
+}
+h2{
+    padding-left: 10px;
+    color: white;
+}
+li{
+    font-weight: 900;
+    padding:10px ;
+    font-size: xx-large;
+    margin-left: 10px;
+}
+#back{
+    padding: 10px;
+    border-radius: 50%;
+    border: solid 3px #1a1a40;
+    top: 80%;
+    right: 5%;
+    position: absolute;
+    background:linear-gradient(135deg, #ff009d, #0d0d0d);
+    color: #fff;                     
+    padding: 12px 28px;
+    border: none;
+    border-radius: 10px;          
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6); /* subtle blue glow */
+    transition: all 0.3s ease;
+
+}
+i{
+    font-size: 50px;
+    font-weight: 900;
+}
+#back:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5), 0 0 15px rgba(115,102,255,0.8); /* stronger glow */
+}

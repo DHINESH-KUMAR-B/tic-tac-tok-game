@@ -1,0 +1,68 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#all{
+
+    background-image: url(image/IMG_20260826_225845_455.jpg);
+    background-size: cover;   
+    background-position: center;
+    height: 100vh;
+}
+#dk-text{
+    padding-top: 25dvh;
+    padding-bottom:10vh ;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+}
+#dk{
+    font-family: "Permanent Marker", cursive;
+    font-size: 60px;
+    font-style: normal;
+    color:azure;
+}
+#xox{
+    font-size: 850%;
+    color: azure;
+    font-family: "Permanent Marker", cursive;
+    font-style: normal;
+    color: azure;
+}
+h1{
+    font-size: 90px;
+    background: transparent;
+}
+button{
+    margin-top: 10vh;
+    padding: 1% 5% 1% 5%;
+    border-radius: 20px;
+    font-size: xx-large;
+    font-weight: 900;
+    border: 2px solid #222222;
+    background-color: #00FF00;
+    color:  #222222;
+    box-shadow: 10px 15px 10px rgba(10,10,10,10);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.bi bi-arrow-right{
+    font-size: 30px;
+    color: #222222;
+    font-weight:bolder;
+}
+@media (max-width: 1024px) {
+  .container {
+    margin-top: 40px; /* tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    margin-top: 20px; /* phones */
+  }
+}
+button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 9px 20px rgba(3,3,3,3);
+}
+
