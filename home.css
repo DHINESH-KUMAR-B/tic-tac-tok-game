@@ -6,6 +6,26 @@ body{
     background-image: url('image/bgfor\ home.png');
     background-size: cover;
     background-position: center;
+    background-repeat: repeat;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    background-image: url("image/bgfor\ home.png");
+    background-size: cover;   /* scales to fill */
+    background-position: center;
+    height: 100vh;
+  }
+}
+
+/* Large-size mobiles (e.g., 425px–767px) */
+@media (max-width: 767px) and (min-width: 425px) {
+  body {
+    background-image: url("image/bgfor\ home.png");
+    background-size: cover;   /* keeps aspect ratio */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
 }
 #heading{
     color: rgba(2, 155, 200);

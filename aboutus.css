@@ -28,6 +28,34 @@ button{
     padding:2px 35px;
     animation: glow 1s ease-in-out infinite alternate;
 }
+@media (max-width: 400px) {
+    button {
+        font-size: 20px;   /* smaller text */
+        padding: 4px 15px; /* tighter padding */
+        top: 85%;          /* adjust position */
+        right: 5%;         /* closer to center */
+    }
+}
+
+/* ✅ Tablets */
+@media (min-width: 401px) and (max-width: 768px) {
+    button {
+        font-size: 30px;
+        padding: 6px 20px;
+        top: 83%;
+        right: 8%;
+    }
+}
+
+/* ✅ Laptops & desktops */
+@media (min-width: 769px) {
+    button {
+        font-size: 50px;   /* original size */
+        padding: 2px 35px;
+        top: 80%;
+        right: 10%;
+    }
+}
 @keyframes glow {
   from {
     box-shadow: 0 0 10px #00BFFF; /* starting glow */

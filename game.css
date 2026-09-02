@@ -19,17 +19,47 @@ body{
     transform: translate(-50%,-50%);
     width: auto;
     height: auto;
-    background-color:white;
+    background:transparent;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 10;
 }
+/* 📱 Small mobiles (up to 480px) */
+@media (max-width: 480px) {
+    #popup-get-information {
+        width: 85%;
+        font-size: 14px;
+        padding: 0px;
+    }
+}
+
+/* 📲 Medium devices (481px – 768px, typical tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #popup-get-information {
+        width: 80%;
+        font-size: 15px;
+    }
+}
+
+/* 💻 Large devices (769px – 1024px, small laptops) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #popup-get-information {
+        width: 60%;
+        font-size: 16px;
+    }
+}
+/* 🖥️ Extra large devices (1025px and above, desktops/laptops) */
+@media (min-width: 1025px) {
+    #popup-get-information {
+        width: 40%;
+        font-size: 18px;
+    }
+}
 #popup-content{
-    width: auto;
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -39,6 +69,40 @@ body{
     border: 2px solid #7366ff;
     background: linear-gradient(135deg, #4facfe, #7366ff);
     padding: 10%;
+}
+/* 📱 Small mobiles (up to 480px) */
+@media (max-width: 480px) {
+    #popup-content {
+        width: 80%;
+        padding: 5%;
+        font-size: 14px;
+    }
+}
+
+/* 📲 Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #popup-content {
+        width: 85%;
+        padding: 8%;
+        font-size: 15px;
+    }
+}
+/* 💻 Small laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #popup-content {
+        width: 70%;
+        padding: 6%;
+        font-size: 16px;
+    }
+}
+
+/* 🖥️ Large laptops & desktops (1025px and above) */
+@media (min-width: 1025px) {
+    #popup-content {
+        width: 50%;
+        padding: 5%;
+        font-size: 18px;
+    }
 }
 h1{
     font-size: 30px;
@@ -56,7 +120,7 @@ h1{
 #exit {
   position: absolute;
   top: 1%;
-  right:-9%;
+  right:-0%;
   background: #ff4d4d; /* red for visibility */
   color: #fff;
   border: none;
@@ -67,6 +131,49 @@ h1{
   cursor: pointer;
   line-height: 28px;
   text-align: center;
+}
+/* 📱 Small mobiles (up to 480px) */
+@media (max-width: 480px) {
+  #exit {
+    width: 22px;
+    height: 22px;
+    font-size: 14px;
+    right: -1%;   /* bring closer so it doesn’t overflow */
+    top: 0%;
+    padding-bottom: 9px;
+  }
+}
+
+/* 📲 Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  #exit {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    right: 1.5%;
+    top: 1.5%;
+  }
+}
+/* 💻 Small laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  #exit {
+    width: 28px;
+    height: 28px;
+    font-size: 18px;
+    right: 9%;
+    top: 1%;
+  }
+}
+
+/* 🖥️ Large laptops & desktops (1025px and above) */
+@media (min-width: 1025px) {
+  #exit {
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    right: 14%;
+    top: 1%;
+  }
 }
 
 #exit:hover {
@@ -83,6 +190,78 @@ h1{
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 16px;
+}
+/* 📱 Small mobiles (up to 480px) */
+@media (max-width: 480px) {
+    #name-label {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+    #name-input {
+        width: 150px;
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+/* 📲 Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    #name-label {
+        font-size: 16px;
+    }
+    #name-input {
+        width: 180px;
+        font-size: 15px;
+        padding: 9px;
+    }
+}
+/* 💻 Small laptops (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #name-label {
+        font-size: 17px;
+    }
+    #name-input {
+        width: 190px;
+        font-size: 16px;
+    }
+}
+
+/* 🖥️ Large laptops & desktops (1025px and above) */
+@media (min-width: 1025px)and (max-width: 1200px) {
+    #name-label {
+        font-size: 18px;
+    }
+    #name-input {
+        width: 120px;
+        font-size: 17px;
+    }
+}
+@media (min-width: 1201px)and (max-width: 1500px) {
+    #name-label {
+        font-size: 18px;
+    }
+    #name-input {
+        width: 180px;
+        font-size: 17px;
+    }
+}
+@media (min-width: 1501px)and (max-width: 1800px) {
+    #name-label {
+        font-size: 18px;
+    }
+    #name-input {
+        width: 190px;
+        font-size: 17px;
+    }
+}
+@media (min-width: 1801px)and (max-width: 2100px) {
+    #name-label {
+        font-size: 18px;
+    }
+    #name-input {
+        width: 200px;
+        font-size: 17px;
+    }
 }
 #submit-name{
     font-size: 16px;
@@ -189,7 +368,7 @@ i{
 #phota{
     width:  22%;
     height: 13.3%;
-    top:10.6%;
+    top:10%;
     right:5.2%;
     position: fixed;
     z-index: 1;
@@ -198,7 +377,7 @@ i{
     z-index: 1;
     position: fixed;
     width:  20%;
-    height: 13%;
+    height: 13.3%;
     border: solid 5px;
     border-radius: 0px 10px 10px 0px;
     top:10%;
@@ -233,34 +412,182 @@ i{
     color: white;
     padding: 5px;
 }
-/* Existing board styles */
-.board {
-      position: fixed;               
-      top: 53%;                       
-      left: 50%; 
-      background: none;                     
-      transform: translate(-50%, -50%);
-      display: grid; 
-      grid-template-columns: repeat(3, 100px);
-      gap: 5px;
-      padding: 20px;
-      border-radius: 10px;                                       
+/* ✅ Small phones */
+@media (max-width: 400px) {
+    #name {
+        font-size: 18px;   /* smaller text */
+        top: 5%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #timer-box {
+        font-size: 15px;   /* smaller text */
+        top: 0%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #playerinfo {
+        width: 40%;        /* take more width */
+        height: 12%;      /* let height adjust naturally */
+        right: 22.5%;        /* center better */
+        top: 13%;
+        border-radius: 5px; /* simpler curve for small screens */
+    }
+     #imgborder {
+        width: 20%;   /* larger relative size */
+        height: 11%; /* keep aspect ratio */
+        top: 13%;
+        right: 2%;
+        border-width: 3px; /* thinner border */
+    }
+    #phota {
+        width: 20%;   /* bigger relative size */
+        height: 11%;
+        top: 13.5%; /* keep aspect ratio */
+        right: 3%;
+    }
 }
 
-/* Existing cell styles */
+/* ✅ Tablets */
+@media (min-width: 401px) and (max-width: 768px) {
+     #name {
+        font-size: 18px;   /* smaller text */
+        top: 5%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #timer-box {
+        font-size: 15px;   /* smaller text */
+        top: 0%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #playerinfo {
+        width: 30%;        /* take more width */
+        height: 12%;      /* let height adjust naturally */
+        right: 12.3%;        /* center better */
+        top: 13%;
+        border-radius: 5px; /* simpler curve for small screens */
+    }
+     #imgborder {
+        width: 10%;   /* larger relative size */
+        height: 11%; /* keep aspect ratio */
+        top: 13%;
+        right: 2%;
+        border-width: 3px; /* thinner border */
+    }
+    #phota {
+        width: 10%;   /* bigger relative size */
+        height: 11%;
+        top: 13.5%; /* keep aspect ratio */
+        right: 2.5%;
+    }
+}
+
+/* ✅ Laptops & desktops */
+@media (min-width: 769px) {
+    #name {
+        font-size: 18px;   /* smaller text */
+        top: 5%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #timer-box {
+        font-size: 15px;   /* smaller text */
+        top: 0%;          /* adjust vertical position */
+        padding: 3px;
+    }
+    #playerinfo {
+        width: 23%;        /* take more width */
+        height: 12%;      /* let height adjust naturally */
+        right: 11.3%;        /* center better */
+        top: 13%;
+        border-radius: 5px; /* simpler curve for small screens */
+    }
+     #imgborder {
+        width: 9%;   /* larger relative size */
+        height: 11%; /* keep aspect ratio */
+        top: 13%;
+        right: 2%;
+        border-width: 3px; /* thinner border */
+    }
+    #phota {
+        width: 9%;   /* bigger relative size */
+        height: 11%;
+        top: 13.5%; /* keep aspect ratio */
+        right: 2.5%;
+    }
+}
+/* ✅ Board styling */
+#board {
+    position: fixed;
+    top: 53%;
+    left: 50%;
+    background: none;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    padding: 20px;
+    border-radius: 10px;
+    visibility: hidden; /* Initially hidden */
+}
+
+/* ✅ Cell styling */
 .cell {
-  height: 90px;
-  border-radius: 10px;
-  border: 2px solid #7366ff;
-  font-size: 70px;
-  background: #eee;
-  cursor: pointer;
+    height: 90px;
+    border-radius: 10px;
+    border: 2px solid #7366ff;
+    font-size: 70px;
+    background: #eee;
+    cursor: pointer;
 
-  /* ✅ Added flex for centering text */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    /* Center text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+.cell {
+    height: 90px;
+    border-radius: 10px;
+    border: 2px solid #7366ff;
+    font-size: 70px;
+    background: #eee;
+    cursor: pointer;
+
+    /* Center text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ✅ Small phones (up to 400px) */
+@media (max-width: 400px) {
+    .cell {
+        height: 60px;
+        width: 90px;
+        font-size: 35px;
+    }
+}
+
+/* ✅ Medium phones & tablets (401px–768px) */
+@media (min-width: 401px) and (max-width: 768px) {
+    .cell {
+        height: 75px;
+        font-size: 50px;
+    }
+}
+
+/* ✅ Large tablets & laptops (769px–1200px) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .cell {
+        height: 85px;
+        font-size: 60px;
+    }
+}
+
+/* ✅ Extra large screens (above 1200px) */
+@media (min-width: 1201px) {
+    .cell { height: 85px;
+        font-size: 70px;
+    }
+}
+
 section{           
   justify-content: center;
 }

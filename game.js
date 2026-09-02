@@ -16,6 +16,7 @@ function closePopup() {
     console.log(n);
     pname.style.color = "rgb(144, 238, 144)";
     pname.textContent = "Name: " + n + " the best friend 😔🦋";
+    pname.style.fontSize = "12px";
   } else if (n.length > 12) {
     let firstPart = n.substring(0, 12);
     let secondPart = n.substring(12);
@@ -75,7 +76,7 @@ function startTimer() {
 }
 function timeleftmessage(){
     let pop=document.getElementById("time-left-pop");
-    pop.style.height="30%";
+    pop.style.height="40%";
     pop.style.top="50%";
     pop.style.left="50%";
     pop.style.padding="10%";
@@ -108,7 +109,7 @@ function createBoard() {
   let s=document.getElementById("turn");
   s.textContent="You are x";
   s.style.position="fixed";
-  s.style.top="79%";
+  s.style.top="85%";
   s.style.left="50%";
   s.style.transform= "translate(-50%, -50%)";
   startTimer();
@@ -122,48 +123,99 @@ function playerMove(index) {
   if (checkWin("✖️")) {
     alert("🎉 You win!");
     win();
+    const sound = document.getElementById('winnerSound');
+    sound.currentTime = 0;
+    sound.play().catch(() => {});
     gameActive = false;
     stopTimer();
     return;
   }
 
   if (isDraw()) {
-    alert("It's a draw!");
-    gameActive = false;
-    stopTimer();
-    return;
-  }
+  alert("It's a draw!");
+  gameActive = false;
+  stopTimer();
+
+  // Restart the game after short delay
+  setTimeout(() => {
+    startGame();
+    gameActive = true;
+  }, 1500); // waits 1.5 seconds before restarting
+  return;
+}
 
   setTimeout(computerMove, 500); // computer plays after short delay
 }
-
-// Computer move (basic random logic)
+// Computer move (smart logic)
 function computerMove() {
   if (!gameActive) return;
 
+  // 1. Try to win if possible
+  let winIndex = findBestMove("😊");
+  if (winIndex !== null) {
+    cells[winIndex].textContent = "😊";
+    if (checkWin("😊")) {
+      alert("தோத்துக்கிட்டே இருக்கியேடா, இனிமே நீ ஜெயிக்கவே முடியாது.");
+      out();
+      let winSound = document.getElementById("win-sound");
+      winSound.play();
+      gameActive = false;
+      stopTimer();
+    }
+    return;
+  }
+
+  // 2. Block player if they are about to win
+  let blockIndex = findBestMove("✖️");
+  if (blockIndex !== null) {
+    cells[blockIndex].textContent = "😊";
+    return;
+  }
+
+  // 3. Otherwise, pick center if free
+  if (cells[4].textContent === "") {
+    cells[4].textContent = "😊";
+    return;
+  }
+
+  // 4. Otherwise, pick a corner if free
+  let corners = [0, 2, 6, 8];
+  let freeCorners = corners.filter(i => cells[i].textContent === "");
+  if (freeCorners.length > 0) {
+    cells[freeCorners[Math.floor(Math.random() * freeCorners.length)]].textContent = "😊";
+    return;
+  }
+
+  // 5. Otherwise, random move
   let emptyIndices = cells
     .map((cell, i) => cell.textContent === "" ? i : null)
     .filter(i => i !== null);
 
-  if (emptyIndices.length === 0) return;
-
-  let choice = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
-  cells[choice].textContent = "😊";
-
-  if (checkWin("😊")) {
-    alert("🤖 Computer wins!");
-    gameActive = false;
-    stopTimer();
-    return;
-  }
-
-  if (isDraw()) {
-    alert("It's a draw!");
-    gameActive = false;
-    stopTimer();
-    return;
+  if (emptyIndices.length > 0) {
+    let choice = emptyIndices[Math.floor(Math.random() * emptyIndices.length)];
+    cells[choice].textContent = "😊";
   }
 }
+
+// Helper: find winning/blocking move
+function findBestMove(player) {
+  const winPatterns = [
+    [0,1,2],[3,4,5],[6,7,8], // rows
+    [0,3,6],[1,4,7],[2,5,8], // columns
+    [0,4,8],[2,4,6]          // diagonals
+  ];
+
+  for (let pattern of winPatterns) {
+    const [a,b,c] = pattern;
+    let values = [cells[a].textContent, cells[b].textContent, cells[c].textContent];
+    if (values.filter(v => v === player).length === 2 &&
+        values.includes("")) {
+      return pattern[values.indexOf("")]; // return empty spot
+    }
+  }
+  return null;
+}
+  
 function win(){
   let w=document.getElementById("win");
   w.style.transform="translate(-50%, -50%)";
@@ -195,6 +247,8 @@ function out(){
   w.style.boxShadow="0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6)";
   w.style.background="linear-gradient(135deg, #ffcc00, #ff9900)";
   w.textContent="ஏய், செத்த பையலே, நாரப் பையலே! ஒழுங்கா விளையாடுடா, அசிங்கப்படுத்திட்ட இல்ல!";
+  let winSound = document.getElementById("win-sound");
+  winSound.play();
 }
 
 // Check win
@@ -219,5 +273,6 @@ function isDraw() {
 
 // Start game after popup closes
 function startGame() {
+  document.getElementById("board").style.visibility= "visible";
   createBoard();
 }

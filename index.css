@@ -34,7 +34,12 @@ h1{
     background: transparent;
 }
 button{
-    margin-top: 10vh;
+    position: fixed;              /* stays fixed on screen */
+    bottom: 5%;                   /* distance from bottom */
+    left: 50%;  
+    width: 170px; 
+    height: 70px;                 /* center horizontally */
+    transform: translateX(-50%);
     padding: 1% 5% 1% 5%;
     border-radius: 20px;
     font-size: xx-large;
@@ -45,8 +50,36 @@ button{
     box-shadow: 10px 15px 10px rgba(10,10,10,10);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
+@media (max-width: 400px) {
+    button {
+        width: 120px;
+        height: 50px;
+        font-size: 16px;
+        bottom: 3%;   /* closer to bottom */
+    }
+}
+
+/* ✅ Tablets */
+@media (min-width: 401px) and (max-width: 768px) {
+    button {
+        width: 140px;
+        height: 60px;
+        font-size: 18px;
+        bottom: 4%;
+    }
+}
+
+/* ✅ Laptops & desktops */
+@media (min-width: 769px) {
+    button {
+        width: 170px;   /* original size */
+        height: 70px;
+        font-size: 22px;
+        bottom: 5%;
+    }
+}
 .bi bi-arrow-right{
-    font-size: 30px;
+    font-size: 80px;
     color: #222222;
     font-weight:bolder;
 }
