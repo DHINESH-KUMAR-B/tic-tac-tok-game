@@ -87,7 +87,7 @@ function timeleftmessage(){
     pop.style.borderRadius="10px";
     pop.style.boxShadow = "inset 0 0 10px rgba(0,0,0,0.7)";
     pop.style.background = "linear-gradient(135deg, #1e3c72, #2a5298)";
-    pop.textContent="💪நேரம்💪 முடிந்தாலும், உன் முயற்சி முடிவதில்லை!.\n Timeout என்பது ஒரு இடைவேளை… வெற்றி இன்னும் காத்திருக்கிறது!🔥🔥🔥🔥";
+    pop.textContent="TIME out";
     pop.style.color="#39ff14";
 }
 
@@ -155,7 +155,7 @@ function computerMove() {
   if (winIndex !== null) {
     cells[winIndex].textContent = "😊";
     if (checkWin("😊")) {
-      alert("தோத்துக்கிட்டே இருக்கியேடா, இனிமே நீ ஜெயிக்கவே முடியாது.");
+      alert("you out,Practice makes perfect.");
       out();
       let winSound = document.getElementById("win-sound");
       winSound.play();
@@ -230,7 +230,7 @@ function win(){
   w.style.fontWeight="900";
   w.style.boxShadow="0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6)";
   w.style.background="linear-gradient(135deg, #ffcc00, #ff9900)";
-  w.textContent="சக்ஸஸ்ஸு! இனிமேல் யாருமே என்னை ஜெயிக்க முடியாது! 🏆🏆🏆🏆";
+  w.textContent="You win,life is also a game play like this.";
 }
 function out(){
   let w=document.getElementById("win");
@@ -246,7 +246,7 @@ function out(){
   w.style.fontWeight="900";
   w.style.boxShadow="0 6px 15px rgba(0,0,0,0.4),0 0 10px rgba(79,172,254,0.6)";
   w.style.background="linear-gradient(135deg, #ffcc00, #ff9900)";
-  w.textContent="ஏய், செத்த பையலே, நாரப் பையலே! ஒழுங்கா விளையாடுடா, அசிங்கப்படுத்திட்ட இல்ல!";
+  w.textContent="out,Failure is the first step to success.";
   let winSound = document.getElementById("win-sound");
   winSound.play();
 }
